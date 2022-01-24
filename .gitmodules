@@ -7,3 +7,6 @@
 [submodule "vim-nerdtree"]
 	path = .vim/pack/plugin/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "tmux-resurrect"]
+	path = .tmux/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
