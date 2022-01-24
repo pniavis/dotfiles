@@ -41,6 +41,9 @@ let g:netrw_winsize=20
 """" Fkeys """"
 map <F1> <Esc>:NERDTreeToggle<Enter>
 
+map <Leader>g :GitGutterBufferToggle<Enter>
+map <Leader>G :GitGutterEnable<Enter>
+
 """" syntax """"
 syntax on
 set t_Co=256
