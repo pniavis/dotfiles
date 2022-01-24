@@ -1,0 +1,9 @@
+[submodule "papercolor-theme"]
+	path = .vim/pack/colors/start/papercolor
+	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "fugitive"]
+	path = .vim/pack/plugin/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
+[submodule "nerdtree"]
+	path = .vim/pack/plugin/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
