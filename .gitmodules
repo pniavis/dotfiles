@@ -19,3 +19,6 @@
 [submodule "vim-airline-themes"]
 	path = /home/pn/.vim/pack/plugin/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim-gitgutter"]
+	path = .vim/pack/plugin/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
