@@ -62,6 +62,5 @@ hi cNumber          cterm=NONE ctermfg=Black
 hi cStorageClass    cterm=NONE ctermfg=Black
 hi cIncluded        cterm=NONE ctermfg=Black
 hi cStructure       cterm=NONE ctermfg=Black
-
-
+hi cConditional     cterm=NONE ctermfg=Black
 
