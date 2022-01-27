@@ -39,6 +39,39 @@ set cscoperelative
 let g:netrw_browse_split=4
 let g:netrw_winsize=20
 
+"""" lightline """"
+function! LightLineGitVersion()
+    let fullname = expand('%')
+    let gitversion = ''
+    if fullname =~? 'fugitive://.*/\.git//0/.*'
+        let gitversion = 'git index'
+    elseif fullname =~? 'fugitive://.*/\.git//.*'
+        let gitversion = 'git index'
+    elseif fullname =~? 'fugitive://.*/\.git//2/.*'
+        let gitversion = 'git target'
+    elseif fullname =~? 'fugitive://.*/\.git//3/.*'
+        let gitversion = 'git merge'
+    elseif &diff == 1
+        let gitversion = 'working copy'
+    endif
+    return gitversion
+endfunction
+
+let g:lightline = {
+    \   'colorscheme': 'PaperColor',
+    \   'active': {
+    \       'left': [ [ 'mode', 'paste' ],
+    \                 [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \   },
+    \   'inactive': {
+    \       'left': [ [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \   },
+    \   'component_function': {
+    \       'gitbranch': 'LightLineGitVersion'
+    \   },
+    \ }
+
+
 """" Fkeys """"
 map <F1> <Esc>:NERDTreeToggle<Enter>
 
