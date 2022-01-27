@@ -2,6 +2,7 @@ let mapleader = "\<Space>"
 
 set nocompatible
 set showcmd
+set laststatus=2
 set number
 set ruler
 set relativenumber
