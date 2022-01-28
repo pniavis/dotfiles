@@ -23,3 +23,6 @@
 [submodule "vim-sneak"]
 	path = .vim/pack/plugin/start/sneak
 	url = https://github.com/justinmk/vim-sneak.git
+[submodule "youcompleteme"]
+	path = .vim/pack/plugin/start/youcompleteme
+	url = https://github.com/ycm-core/YouCompleteMe.git
