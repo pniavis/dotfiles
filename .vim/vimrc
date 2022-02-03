@@ -7,6 +7,7 @@ set number
 set ruler
 set relativenumber
 set nobackup
+set path+=**
 set wildmenu
 set wildmode=longest:full,full
 set hidden
