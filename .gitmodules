@@ -26,3 +26,7 @@
 [submodule "youcompleteme"]
 	path = .vim/pack/plugin/start/youcompleteme
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vim-coc"]
+	path = /home/pn/.vim/pack/plugin/start/coc
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release
