@@ -1,6 +1,7 @@
 let mapleader = "\<Space>"
-
 set nocompatible
+set t_Co=256
+
 set showcmd
 set laststatus=2
 set number
@@ -11,6 +12,11 @@ set path+=**
 set wildmenu
 set wildmode=longest:full,full
 set hidden
+set splitbelow
+set splitright
+syntax on
+set background=light
+colorscheme PaperColor
 
 """" identation """"
 filetype plugin indent on
@@ -22,7 +28,7 @@ set expandtab
 set virtualedit=all
 
 """" search """"
-set hlsearch
+"set hlsearch
 set incsearch
 nnoremap <Leader>w /\s\+$<Enter>
 nnoremap <Leader>W :%s/\s\+$//g<Enter>
@@ -90,10 +96,6 @@ map <Leader>g :GitGutterBufferToggle<Enter>
 map <Leader>G :GitGutterEnable<Enter>
 
 """" syntax """"
-syntax on
-set t_Co=256
-set background=light
-colorscheme PaperColor
 hi cConstant        cterm=NONE ctermfg=Black
 hi cIdentifier      cterm=NONE ctermfg=Black
 hi cFunction        cterm=NONE ctermfg=Black
