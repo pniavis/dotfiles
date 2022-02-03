@@ -108,4 +108,6 @@ hi cStorageClass    cterm=NONE ctermfg=Black
 hi cIncluded        cterm=NONE ctermfg=Black
 hi cStructure       cterm=NONE ctermfg=Black
 hi cConditional     cterm=NONE ctermfg=Black
+hi cLabel           cterm=NONE ctermfg=Black
+hi cOperator        cterm=NONE ctermfg=Black
 
