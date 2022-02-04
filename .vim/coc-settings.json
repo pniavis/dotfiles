@@ -1,4 +1,5 @@
 {
+    "callHierarchy.splitCommand": "10split",
     "diagnostic.enable": false,
     "diagnostic.autoRefresh": false,
     "suggest.autoTrigger": "none",
