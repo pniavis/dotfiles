@@ -111,3 +111,5 @@ hi cConditional     cterm=NONE ctermfg=Black
 hi cLabel           cterm=NONE ctermfg=Black
 hi cOperator        cterm=NONE ctermfg=Black
 
+source ~/.vim/coc.vim
+
