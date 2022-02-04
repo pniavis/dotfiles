@@ -1,4 +1,4 @@
-PS1='\W > '
+PS1='\h \W > '
 alias dtf="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 stty -ixon
 
