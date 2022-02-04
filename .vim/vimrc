@@ -5,15 +5,21 @@ set t_Co=256
 set showcmd
 set laststatus=2
 set number
-set ruler
 set relativenumber
-set nobackup
+set ruler
 set path+=**
 set wildmenu
 set wildmode=longest:full,full
+set ignorecase
+set smartcase
 set hidden
 set splitbelow
 set splitright
+set nobackup
+set nowritebackup
+set shortmess+=c
+set updatetime=300
+set virtualedit=all
 syntax on
 set background=light
 colorscheme PaperColor
@@ -25,7 +31,6 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
-set virtualedit=all
 
 """" search """"
 "set hlsearch
@@ -48,13 +53,6 @@ let g:netrw_winsize=20
 
 """" sneak """"
 let g:sneak#label = 1
-
-"""" youcompleteme """"
-let g:ycm_auto_hover = ''
-nmap <leader>yh <plug>(YCMHover)
-let g:ycm_show_diagnostics_ui=0
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_autoclose_preview_window_after_completion=1
 
 """" lightline """"
 function! LightLineGitVersion()
