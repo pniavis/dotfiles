@@ -23,6 +23,6 @@
 	path = .vim/pack/plugin/start/sneak
 	url = https://github.com/justinmk/vim-sneak.git
 [submodule "vim-coc"]
-	path = /home/pn/.vim/pack/plugin/start/coc
+	path = .vim/pack/plugin/start/coc
 	url = https://github.com/neoclide/coc.nvim.git
 	branch = release
