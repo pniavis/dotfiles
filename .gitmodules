@@ -19,9 +19,6 @@
 [submodule "vim-lightline"]
 	path = .vim/pack/plugin/start/lightline
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule "vim-sneak"]
-	path = .vim/pack/plugin/start/sneak
-	url = https://github.com/justinmk/vim-sneak.git
 [submodule "vim-coc"]
 	path = .vim/pack/plugin/start/coc
 	url = https://github.com/neoclide/coc.nvim.git
