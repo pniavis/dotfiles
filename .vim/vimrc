@@ -19,6 +19,7 @@ set nobackup
 set nowritebackup
 set shortmess+=c
 set updatetime=300
+set timeoutlen=2000
 set virtualedit=all
 syntax on
 set background=light
@@ -112,4 +113,9 @@ hi cLabel           cterm=NONE ctermfg=Black
 hi cOperator        cterm=NONE ctermfg=Black
 
 source ~/.vim/coc.vim
+set tagfunc=CocTagFunc
 
+let g:ctrlp_map = ''
+nnoremap <leader>; :CtrlPBuffer<cr>
+nnoremap <leader>' :CtrlP<cr>
+let g:ctrlp_working_path_mode = ''

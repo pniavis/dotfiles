@@ -6,11 +6,12 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>cg <Plug>(coc-definition)
 nmap <silent> <leader>cs <Plug>(coc-references)
 nmap <silent> <Leader>cc :call CocActionAsync('showIncomingCalls')<CR>
+nmap <silent> <Leader>cd :call CocActionAsync('showOutgoingCalls')<CR>
 nmap <leader>cr <Plug>(coc-rename)
 nnoremap <silent> <leader>ch :call CocActionAsync('doHover')<CR>
 nnoremap <silent> <leader>cdt :call CocActionAsync('diagnosticToggle')<CR>
 nnoremap <silent> <leader>cdr :call CocActionAsync('diagnosticRefresh')<CR>
-nnoremap <silent><nowait> <leader>cs  :<C-u>CocList --input=<C-r><C-w> -I symbols<cr>
+nnoremap <silent><nowait> <leader>cl  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <leader>co  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <leader>cj  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <leader>ck  :<C-u>CocPrev<CR>
