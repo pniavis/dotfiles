@@ -56,23 +56,6 @@ let g:netrw_winsize=20
 let g:sneak#label = 1
 
 """" lightline """"
-function! LightLineGitVersion()
-    let fullname = expand('%')
-    let gitversion = ''
-    if fullname =~? 'fugitive://.*/\.git//0/.*'
-        let gitversion = 'git index'
-    elseif fullname =~? 'fugitive://.*/\.git//.*'
-        let gitversion = 'git index'
-    elseif fullname =~? 'fugitive://.*/\.git//2/.*'
-        let gitversion = 'git target'
-    elseif fullname =~? 'fugitive://.*/\.git//3/.*'
-        let gitversion = 'git merge'
-    elseif &diff == 1
-        let gitversion = 'working copy'
-    endif
-    return gitversion
-endfunction
-
 let g:lightline = {
     \   'colorscheme': 'PaperColor',
     \   'active': {
@@ -81,9 +64,6 @@ let g:lightline = {
     \   },
     \   'inactive': {
     \       'left': [ [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-    \   },
-    \   'component_function': {
-    \       'gitbranch': 'LightLineGitVersion'
     \   },
     \ }
 
@@ -119,3 +99,22 @@ let g:ctrlp_map = ''
 nnoremap <leader>; :CtrlPBuffer<cr>
 nnoremap <leader>' :CtrlP<cr>
 let g:ctrlp_working_path_mode = ''
+
+if &diff
+     function! IwhiteToggle()
+       if &diffopt =~ 'iwhite'
+         set diffopt-=iwhite
+       else
+         set diffopt+=iwhite
+       endif
+     endfunction
+     map gs :call IwhiteToggle()<CR>
+ endif
+
+
+
+set wildignore+=*.o,*.ko,*.o.cmd
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+
