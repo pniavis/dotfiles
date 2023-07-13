@@ -20,6 +20,7 @@ set nowritebackup
 set shortmess+=c
 set updatetime=300
 set timeoutlen=2000
+"set noto
 set virtualedit=all
 syntax on
 set background=light
@@ -71,7 +72,8 @@ let g:lightline = {
 """" Fkeys """"
 map <F1> <Esc>:NERDTreeToggle<Enter>
 
-map <Leader>g :GitGutterBufferToggle<Enter>
+map <Leader>gg :GitGutterBufferToggle<Enter>
+map <Leader>gu :GitGutterUndoHunk<Enter>
 map <Leader>G :GitGutterEnable<Enter>
 
 """" syntax """"
@@ -97,6 +99,7 @@ set tagfunc=CocTagFunc
 
 let g:ctrlp_map = ''
 nnoremap <leader>; :CtrlPBuffer<cr>
+nnoremap <leader>[ :CtrlPLine<cr>
 nnoremap <leader>' :CtrlP<cr>
 let g:ctrlp_working_path_mode = ''
 
@@ -114,6 +117,7 @@ if &diff
 
 
 set wildignore+=*.o,*.ko,*.o.cmd
+set wildignore+=build
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
