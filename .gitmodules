@@ -23,3 +23,6 @@
 [submodule "ctrlp.vim"]
 	path = .vim/pack/plugin/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim-lightline"]
+	path = .vim/pack/plugin/start/lightline
+	url = https://github.com/itchyny/lightline.vim.git
