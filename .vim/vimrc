@@ -2,6 +2,7 @@ let mapleader = "\<Space>"
 set nocompatible
 set t_Co=256
 
+set noswapfile
 set showcmd
 set laststatus=2
 set number
@@ -10,6 +11,9 @@ set ruler
 set path+=**
 set wildmenu
 set wildmode=longest:full,full
+set foldmethod=indent
+set foldtext=
+set foldlevelstart=99
 set ignorecase
 set smartcase
 set hidden
@@ -24,14 +28,15 @@ set timeoutlen=2000
 set virtualedit=all
 syntax on
 set background=light
+set listchars=eol:$,space:-,tab:>#,trail:~
 colorscheme PaperColor
 
 """" identation """"
 filetype plugin indent on
 set autoindent
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
 set expandtab
 
 """" search """"
@@ -45,6 +50,7 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
+nnoremap <C-c> <C-W>c
 
 """" cscope """"
 set cscoperelative
@@ -70,7 +76,9 @@ let g:lightline = {
 
 
 """" Fkeys """"
-map <F1> <Esc>:NERDTreeToggle<Enter>
+noremap <F1> <Esc>:NERDTreeToggle<Enter>
+noremap <F2>  <ESC>:set relativenumber!<CR>
+noremap <F12>  <ESC>:set list!<CR>
 
 map <Leader>gg :GitGutterBufferToggle<Enter>
 map <Leader>gu :GitGutterUndoHunk<Enter>
@@ -102,6 +110,12 @@ nnoremap <leader>; :CtrlPBuffer<cr>
 nnoremap <leader>[ :CtrlPLine<cr>
 nnoremap <leader>' :CtrlP<cr>
 let g:ctrlp_working_path_mode = ''
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|Debug.*|docs|.*bin)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 if &diff
      function! IwhiteToggle()
@@ -118,7 +132,4 @@ if &diff
 
 set wildignore+=*.o,*.ko,*.o.cmd
 set wildignore+=build
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
 
