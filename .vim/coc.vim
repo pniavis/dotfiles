@@ -29,6 +29,7 @@ nmap <silent> <leader>cs <Plug>(coc-references)
 nmap <silent> <Leader>cc :call CocAction('showIncomingCalls')<CR>
 nmap <silent> <Leader>cd :call CocActionAsync('showOutgoingCalls')<CR>
 nmap <leader>cr <Plug>(coc-rename)
+vmap <leader>cf  <Plug>(coc-format-selected)
 nnoremap <silent> <leader>ch :call CocActionAsync('doHover')<CR>
 nnoremap <silent> <leader>cdt :call CocActionAsync('diagnosticToggle')<CR>
 nnoremap <silent> <leader>cdr :call CocActionAsync('diagnosticRefresh')<CR>

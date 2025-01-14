@@ -44,6 +44,8 @@ set expandtab
 set incsearch
 nnoremap <Leader>w /\s\+$<Enter>
 nnoremap <Leader>W :%s/\s\+$//g<Enter>
+nnoremap <leader>mm :execute 'match Error /\<' . expand('<cword>') . '\>/'<CR>
+nnoremap <leader>mn :match none<CR>
 
 """" windows """""
 nnoremap <C-h> <C-W>h
@@ -78,6 +80,7 @@ let g:lightline = {
 """" Fkeys """"
 noremap <F1> <Esc>:NERDTreeToggle<Enter>
 noremap <F2>  <ESC>:set relativenumber!<CR>
+noremap <F3>  <ESC>:set hls!<CR>
 noremap <F12>  <ESC>:set list!<CR>
 
 map <Leader>gg :GitGutterBufferToggle<Enter>
